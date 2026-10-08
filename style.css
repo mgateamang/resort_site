@@ -10,6 +10,8 @@ nav {
     min-width: 100%;
     display: flex;
     align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 header h1 {
@@ -31,7 +33,7 @@ nav a {
 }
 
 body {
-    margin: 0 0;
+    margin: 0;
     font-family: "Clarity City", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -59,18 +61,26 @@ h2 {
     text-shadow: 0 0 16px black;
 }
 
-.home-background {
+.hero-header {
+    text-align: center;
+}
+
+.home-background,
+.reservation-background {
     background-image: url("resort.jpg");
-    z-index: -9999;
     background-position: center;
     background-size: cover;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
     display: flex;
+}
+
+.home-background {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 260px;
+    padding-bottom: 60px;
 }
 
 .top-bar-content {
@@ -78,8 +88,7 @@ h2 {
     top: 0;
     left: 0;
     right: 0;
-    padding-bottom: 64px;
-    padding: 0 5%;
+    padding: 0 5% 64px;
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.25);
 
@@ -100,19 +109,9 @@ p {
 }
 
 .reservation-background {
-    background-image: url("resort.jpg");
-    z-index: -9999;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 60px;
 }
 
 .reservation-content {
@@ -194,4 +193,69 @@ form button:hover {
 
 .horizontal-flex div input, .horizontal-flex div label {
     flex: 1;
+}
+
+.amenities-container {
+    width: min(1180px, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 34px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.amenity-card {
+    width: 300px;
+}
+
+.amenity-title {
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    padding: 10px 18px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.amenity-title span {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #1c1b1a;
+    font-family: "Clarity City", sans-serif;
+}
+
+.amenity-image-wrapper {
+    background: #f0c9af;
+    border: 2px solid #f0c9af;
+    border-radius: 24px 24px 0 0;
+    overflow: hidden;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+}
+
+.amenity-image {
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 120px 120px 0 0;
+    border: 4px solid #efc3a0;
+    border-bottom: none;
+}
+
+.amenity-description {
+    padding: 14px 8px 14px;
+    color: #1f1f1f;
+    background: rgba(255, 255, 255, 0.78);
+}
+
+.amenity-description p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #1f1f1f;
+    font-family: "Clarity City", sans-serif;
+    background-color: transparent;
+    text-align: left;
 }
