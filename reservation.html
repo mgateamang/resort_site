@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Epstein Island Resort</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="top-bar-content">
         <header>
@@ -22,18 +24,21 @@
 
     <div class="reservation-background">
         <div class="reservation-content">
-
             <h2>Make a Reservation</h2>
-
             <form>
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="contact">Contact Number</label>
-                <input type="text" id="contact" name="contact" required>
+                <div class="horizontal-flex">
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="contact">Contact Number</label>
+                        <input type="text" id="contact" name="contact" required>
+                    </div>
+                </div>
 
                 <label for="room">Room Type</label>
                 <select id="room" name="room">
@@ -43,11 +48,17 @@
                     <option>Suite</option>
                 </select>
 
-                <label for="checkin">Check-in Date</label>
-                <input type="date" id="checkin" name="checkin" required>
+                <div class="horizontal-flex">
+                    <div>
+                        <label for="checkin">Check-in Date</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+                    <div>
+                        <label for="checkout">Check-out Date</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+                </div>
 
-                <label for="checkout">Check-out Date</label>
-                <input type="date" id="checkout" name="checkout" required>
 
                 <label for="guests">Number of Guests</label>
                 <input type="number" id="guests" name="guests" min="1" required>
@@ -64,4 +75,5 @@
     <footer>
     </footer>
 </body>
+
 </html>
