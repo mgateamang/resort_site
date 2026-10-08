@@ -6,16 +6,47 @@
   }
 }
 
+.top-bar-content {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 5%;
+    margin: 0 0 2% 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    gap: 32px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 nav {
     min-width: 100%;
     display: flex;
     align-items: center;
     position: -webkit-sticky;
-    position: sticky;
+
+    flex-grow: 1;
+
+    min-width: 0;
+
+    anchor-name: --nav-anchor;
 }
 
 header h1 {
+    min-width: max-content;
     text-align: center;
+
+    anchor-name: --header-anchor;
+}
+
+@media screen and (max-width: 1280px) {
+    header h1 {
+        display: none;
+    }
 }
 
 nav a {
@@ -25,11 +56,15 @@ nav a {
     text-align: center;
     margin: 0 16px;
 
-    background-color: rgb(255, 255, 255, 0.25);
+    text-decoration: none;
+
+    background-color: rgb(255, 255, 255, 1);
+    color: black;
 }
 
 .link-selected {
-    background-color: rgb(255, 255, 255, 1);
+    background-color: rgb(0, 0, 0, 1);
+    color: white;
 }
 
 body {
@@ -49,13 +84,28 @@ h1 {
     font-size: 50pt;
 }
 
+h3 {
+    font-family: "Libre Caslon Condensed", serif;
+
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30pt;
+
+    margin-top: -110-08-202620pt;
+
+    color: white;
+    text-shadow: 0 0 16px black;
+}
+
 h2 {
     font-family: "Libre Caslon Condensed", serif;
 
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 80pt;
+    /* font-size: 80pt; */
+    font-size: clamp(40pt, 4vw + 1rem, 80pt);
 
     color: white;
     text-shadow: 0 0 16px black;
@@ -65,39 +115,34 @@ h2 {
     text-align: center;
 }
 
-.home-background,
-.reservation-background {
+.site-background {
     background-image: url("resort.jpg");
     background-position: center;
     background-size: cover;
-    position: relative;
+    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
     min-height: 100vh;
     box-sizing: border-box;
     display: flex;
+
+    z-index: -999;
 }
 
-.home-background {
+.site-background {
     flex-direction: column;
     align-items: center;
     padding-top: 260px;
     padding-bottom: 60px;
 }
 
-.top-bar-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0 5% 64px;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.25);
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
 .home-content {
     margin: auto;
+    max-width: fit-content;
 }
 
 p {
@@ -108,16 +153,11 @@ p {
     font-size: 16pt;
 }
 
-.reservation-background {
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 60px;
-}
-
 .reservation-content {
     width: 500px;
-    margin-top: 180px;
     padding: 30px 40px;
+
+    margin: auto;
 
     background-color: rgba(255, 255, 255, 0.75);
 

@@ -22,54 +22,53 @@
         </nav>
     </div>
 
-    <div class="reservation-background">
-        <div class="reservation-content">
-            <h2>Make a Reservation</h2>
-            <form>
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
+    <div class="site-background"> </div>
+    <div class="reservation-content">
+        <h2>Make a Reservation</h2>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
 
-                <div class="horizontal-flex">
-                    <div>
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div>
-                        <label for="contact">Contact Number</label>
-                        <input type="text" id="contact" name="contact" required>
-                    </div>
+            <div class="horizontal-flex">
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-
-                <label for="room">Room Type</label>
-                <select id="room" name="room">
-                    <option>Standard Room</option>
-                    <option>Deluxe Room</option>
-                    <option>Family Room</option>
-                    <option>Suite</option>
-                </select>
-
-                <div class="horizontal-flex">
-                    <div>
-                        <label for="checkin">Check-in Date</label>
-                        <input type="date" id="checkin" name="checkin" required>
-                    </div>
-                    <div>
-                        <label for="checkout">Check-out Date</label>
-                        <input type="date" id="checkout" name="checkout" required>
-                    </div>
+                <div>
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contact" name="contact" required>
                 </div>
+            </div>
+
+            <label for="room">Room Type</label>
+            <select id="room" name="room">
+                <option>Standard Room</option>
+                <option>Deluxe Room</option>
+                <option>Family Room</option>
+                <option>Suite</option>
+            </select>
+
+            <div class="horizontal-flex">
+                <div>
+                    <label for="checkin">Check-in Date</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                <div>
+                    <label for="checkout">Check-out Date</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+            </div>
 
 
-                <label for="guests">Number of Guests</label>
-                <input type="number" id="guests" name="guests" min="1" required>
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" required>
 
-                <label for="requests">Special Requests</label>
-                <textarea id="requests" name="requests" rows="4"></textarea>
+            <label for="requests">Special Requests</label>
+            <textarea id="requests" name="requests" rows="4"></textarea>
 
-                <button type="submit">SUBMIT RESERVATION</button>
-            </form>
+            <button type="submit">SUBMIT RESERVATION</button>
+        </form>
 
-        </div>
     </div>
 
     <footer>
