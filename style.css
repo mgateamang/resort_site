@@ -98,3 +98,83 @@ p {
     padding: 16px;
     font-size: 16pt;
 }
+
+.reservation-background {
+    background-image: url("resort.jpg");
+    z-index: -9999;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservation-content {
+    width: 500px;
+    margin-top: 180px;
+    padding: 30px 40px;
+
+    background-color: rgba(255, 255, 255, 0.75);
+
+    box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.reservation-content h2 {
+    color: black;
+    text-align: center;
+    font-size: 45pt;
+    text-shadow: none;
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 13pt;
+}
+
+form input,
+form select,
+form textarea {
+    padding: 10px;
+    font-family: "Clarity City", sans-serif;
+    font-size: 12pt;
+    border: 1px solid black;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 12px;
+
+    font-family: "Clarity City", sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+
+    color: white;
+    background-color: black;
+
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #333;
+}
