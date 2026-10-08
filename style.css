@@ -6,6 +6,16 @@
   }
 }
 
+footer {
+    position: relative;
+    left: 0;
+    right: 0;
+
+    margin-top: 32px;
+    padding: 10px 5%;
+    background-color: white;
+}
+
 .top-bar-content {
     position: sticky;
     top: 0;
@@ -143,11 +153,14 @@ h2 {
 .home-content {
     margin: auto;
     max-width: fit-content;
+    min-height: calc(100vh - (213px + 64px + 27px + 53px))
 }
 
-p {
+p.special-para {
     color: black;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     text-align: center;
     padding: 16px;
     font-size: 16pt;
@@ -159,10 +172,9 @@ p {
 
     margin: auto;
 
-    background-color: rgba(255, 255, 255, 0.75);
-
     box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.25);
 
+    background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
