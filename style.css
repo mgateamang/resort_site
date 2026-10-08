@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap');
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+nav {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    text-align: center;
+}
+
+nav a {
+    flex: 1;
+    padding: 15pt;
+    color: black;
+    text-align: center;
+    margin: 0 16px;
+
+    background-color: rgb(255, 255, 255, 0.25);
+}
+
+.link-selected {
+    background-color: rgb(255, 255, 255, 1);
+}
+
+body {
+    margin: 0 0;
+    font-family: "Clarity City", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Libre Caslon Condensed", serif;
+
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50pt;
+}
+
+h2 {
+    font-family: "Libre Caslon Condensed", serif;
+
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 80pt;
+
+    color: white;
+    text-shadow: 0 0 16px black;
+}
+
+.home-background {
+    background-image: url("resort.jpg");
+    z-index: -9999;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+}
+
+.top-bar-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 64px;
+    padding: 0 5%;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.home-content {
+    margin: auto;
+}
+
+p {
+    color: black;
+    background-color: white;
+    text-align: center;
+    padding: 16px;
+    font-size: 16pt;
+}
